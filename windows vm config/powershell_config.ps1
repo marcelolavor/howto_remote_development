@@ -2,7 +2,10 @@
 # Search for the latest version of PowerShell
 winget search Microsoft.PowerShell
 
-# Install PowerShell 
+# Check the current installed release
+$PSVersionTable.PSVersion
+
+# Install latest PowerShell 
 winget install --id Microsoft.Powershell --source winget
 
 # Install PowerShell Preview
