@@ -10,7 +10,7 @@
 
 ## Config applications accesses:
 
-- GitHub (github_conn.ps1)
-- Bitbucket (bitbucket_conn.ps1)
-- SourceTree (sourcetree_config.ps1)
-- Virutal Machine SSH (vm_conn.ps1)
+- GitHub
+- Bitbucket
+- SourceTree
+- Virtal Machine
