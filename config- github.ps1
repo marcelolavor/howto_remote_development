@@ -1,5 +1,5 @@
 # Testa conexão física com o GitHub
-ssh -Tv git@github.com
+ssh -Tv git@<your-repo-server> -p <port>
 
 # Eleva o nível de debug para identificação de falhas
 SET GIT_TRACE=1
