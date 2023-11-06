@@ -43,13 +43,13 @@ or
 powershell ssh-add $env:USERPROFILE\.ssh\id_ed25519
 
 ## Local dos arquivos de configuração ssh de um usuário
-%userprofile%\.ssh\
+dir $env:USERPROFILE\.ssh
 
-## Local dos arquivos de configuração ssh de um usuário
-%programdata%\ssh\
+## Local dos arquivos de configuração do ssh server
+dir $env:programdata\ssh\
 
 ##  Local dos arquivos do Openssh
-%systemdrive%\Windows\System32\openssh
+dir $env:systemdrive\Windows\System32\openssh
 
 ## Define powershell as standard shell for ssh
-New-ItemProperty -Path "HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
+#New-ItemProperty -Path "HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
