@@ -19,5 +19,13 @@ $curl_home = "C:\Users\<your-user>\AppData\Local\Microsoft\WinGet\Packages\<curl
 [Environment]::SetEnvironmentVariable("PATH", $curl_home + ";" + [Environment]::GetEnvironmentVariable("PATH", "Machine") , "Machine") # Adicionar o cURL ao PATH
 [Environment]::GetEnvironmentVariable("PATH", "Machine") -split ";" # Verificar adição
 
+<<<<<<< HEAD
 # Apply system & user environment variables to the current command line session
 $env:PATH = [System.Environment]::GetEnvironmentVariable('PATH', 'Machine') + ";" + [System.Environment]::GetEnvironmentVariable('PATH', 'User')
+=======
+# Atualizar as variáves de ambiente numa sessão PS
+$env:PATH = [System.Environment]::GetEnvironmentVariable('PATH', 'User') + ";" + [System.Environment]::GetEnvironmentVariable('PATH', 'Machine') 
+
+# Listar os valores do PATH
+[System.Environment]::GetEnvironmentVariable('PATH', 'User') + ";" + [System.Environment]::GetEnvironmentVariable('PATH', 'Machine') -split ";"
+>>>>>>> a988ebaf02ac244400d3960baec681f69a748985
